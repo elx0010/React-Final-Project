@@ -9,24 +9,17 @@ const Show = () => {
     const { id } = useParams()
     const [loading, setLoading] = useState(true);
 
-    async function getShow() {
+    useEffect(() => {
+    const timer = setTimeout(() => { 
         setLoading(true);
         if (!id) return;
-        try {
-            const { data } = await axios.get(`https://api.jikan.moe/v4/anime/${id}`);
-            setShow(data);
-        } catch (error) {
-            setShow({});
-        }
-    }
-
-    useEffect(() => {
-        const timer = setTimeout(() => { 
-            getShow();
-            setLoading(false); 
-        }, 1000);
-        return () => clearTimeout(timer);
-    }, [id]);
+        axios.get(`https://api.jikan.moe/v4/anime/${id}`)
+            .then(({ data }) => setShow(data))
+            .catch(() => setShow({}))
+            .finally(() => setLoading(false));
+    }, 1000);
+    return () => clearTimeout(timer);
+}, [id]);
 
 
   return (
@@ -80,7 +73,7 @@ const Show = () => {
                                         {show.data.synopsis}
                                     </p>
                                 </div>
-                                <a href={show.data.url} target="_blank" className="mal-button">
+                                <a href={show.data.url} target="_blank" rel="noreferrer" className="mal-button">
                                     MyAnimeList Page
                                 </a>
                             </div>

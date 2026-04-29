@@ -88,9 +88,9 @@
 
 .shows__loading--spinner {
     display: none !important;
-    position: absolute;
-    top: 90%;
-    left: 50%;
+    position: fixed;
+    top: 95%;
+    left: 48%;
     transform: translate(-50%, -50%);
     z-index: 9999;
     font-size: 64px;
@@ -115,6 +115,18 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .shows__loading--spinner {
+        left: 47%;
+    }
+}
+
+@media (max-width: 768px) {
+    .shows__loading--spinner {
+        left: 44%;
+    }
+}
+
 @media (min-width: 1200px) {
     .shows__grid{
         padding-top: 84px;
@@ -128,8 +140,13 @@
         margin: 0;
     }
 }
+
 @media (max-width: 450px) {
     #shows{
         padding: 0;
+    }
+
+    .shows__loading--spinner {
+        left: 40%;
     }
 }

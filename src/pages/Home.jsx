@@ -2,17 +2,15 @@ import React, { useState, useRef } from 'react'
 import './Home.css'
 import banner from '../assets/banner__bckgnd.jpg'
 import Navbar from '../components/Navbar'
-import { useNavigate, Link } from 'react-router-dom'
 import ShowCards from '../components/ShowCards'
 
 const Home = () => {
-    const navigate = useNavigate();
     
     const [search, setSearch] = useState('')
     const inputRef = useRef(null);
 
     function resetShows() {
-        let timer = setTimeout(() => {
+        setTimeout(() => {
             if (inputRef.current && inputRef.current.value === '') {
                 setSearch("")
             }
