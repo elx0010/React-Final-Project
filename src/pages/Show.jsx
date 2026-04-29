@@ -31,35 +31,6 @@ const Show = () => {
 
   return (
     <div>
-        {/* <section id="show__details">
-            <div className="container">
-                <div className="row">
-                    <header className="show__header">
-                        <h2 className="show__title">{show.data?.title || "Loading..."}</h2>
-                        <button className="back__btn" onClick= {() => navigate('/')} >Back</button>
-                    </header>
-                    <div className="show__content">
-                        {show.data && show.data.images ? (
-                            <>
-                                <img src={show.data.images.jpg.image_url} alt={show.data.title} />
-                                <div className="show__details">
-                                    <p><strong>Rating:</strong> {show.data.score ?? "N/A"}</p>
-                                    <p><strong>Episodes:</strong> {show.data.episodes ?? "N/A"}</p>
-                                    <p><strong>Status:</strong> {show.data.status}</p>
-                                    <p><strong>Aired:</strong> {show.data.aired?.string}</p>
-                                    <p><strong>URL:</strong> <a href={show.data.url} target="_blank" rel="">MyAnimeListPage</a></p>
-                                </div>
-                                <div className="show__synopsis">
-                                    <p><strong>Synopsis:</strong> {show.data.synopsis}</p>
-                                </div>
-                            </>
-                        ) : (
-                            <div>Loading Show Details...</div>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </section> */}
         {show.data && show.data.images ?  
             <>
                 <div className="navbar">
@@ -127,8 +98,8 @@ const Show = () => {
                 </div>
             </>
              : (
-                <div className={loading ? ' shows__loading' : ''}>
-                    <i className="fa-solid fa-spinner shows__loading--spinner"></i>
+                <div className={loading ? ' show__loading' : ''}>
+                    <i className="fa-solid fa-spinner show__loading--spinner"></i>
                 </div>
             )}
     </div>

@@ -25,6 +25,7 @@ html body {
 .row {
     padding: 0 36px 36px 36px;
     background: #1a1a2e;
+    margin: 0 auto;
 }
 
 .back-link {
@@ -231,17 +232,17 @@ html body {
   font-size: 14px;
 }
 
-.shows__loading--spinner {
+.show__loading--spinner {
     display: none !important;
     position: fixed;
-    top: 95%;
+    top: 50%;
     left: 47%;
     transform: translate(-50%, -50%);
     z-index: 9999;
     font-size: 64px;
 }
 
-.shows__loading .shows__loading--spinner {
+.show__loading .show__loading--spinner {
     display: block !important;
 }
 
