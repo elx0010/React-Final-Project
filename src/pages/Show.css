@@ -234,7 +234,7 @@ html body {
 .shows__loading--spinner {
     display: none !important;
     position: fixed;
-    top: 50%;
+    top: 95%;
     left: 47%;
     transform: translate(-50%, -50%);
     z-index: 9999;
