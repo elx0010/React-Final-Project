@@ -26,13 +26,19 @@
     text-shadow: 2px 2px 2px rgba(0,0,0,0.4), 2px 2px 2px rgba(0,0,0,0.4);
 }
 
-.nav__link a {
+.nav__link button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
     transition: all 0.3s ease;
     font-weight: 600;
-    
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link button:hover {
     transform: scale(1.1);
     box-shadow:
         0 4px 16px 0 rgba(0,0,0,0.3);

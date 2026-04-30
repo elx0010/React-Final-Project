@@ -35,13 +35,13 @@ const Navbar = () => {
         </h2>
         <ul className="nav__link--list">
             <li className="nav__link">
-                <a href="/" onClick={() => focusSearch()}>Search</a>
+                <button type="button" className="nav__link--search" onClick={() => focusSearch()}>Search</button>
             </li>
             <li className="nav__link">
-                <a href="#shows" className="nav__link--top-rated">Top Rated</a>
+                <button type="button" className="nav__link--top-rated" onClick={() => window.location.hash = '#shows'}>Top Rated</button>
             </li>
             <li className="nav__link">
-                <a href="/" className="nav__link--contact">Contact</a>
+                <button type="button" className="nav__link--contact">Contact</button>
             </li>
         </ul>
     </div>
